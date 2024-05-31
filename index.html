@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crack the code</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <h1>Crack the Code</h1>
+    <div>
+      <h2 style="font-weight: 100">
+        Enter 4 digits code. After pressing Enter u will get information how
+        many digits You guessed correct
+      </h2>
+    </div>
+    <h2 id="guessCount">Guesses: 0</h2>
+    <div id="inputs">
+      <input type="number" id="input1" max="9" min="0" />
+      <input type="number" id="input2" max="9" min="0" disabled />
+      <input type="number" id="input3" max="9" min="0" disabled />
+      <input type="number" id="input4" max="9" min="0" disabled />
+    </div>
+    <div id="guesses"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
+<div id="winModal" class="modal">
+  <div class="modal-content">
+    <h2>Congratulations!</h2>
+    <h2 id="winMessage"></h2>
+    <button id="playAgain">Play Again</button>
+    <button id="closeModal">Close</button>
+  </div>
+</div>
