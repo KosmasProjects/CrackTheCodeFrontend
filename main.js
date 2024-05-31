@@ -10,7 +10,7 @@ let guessCount = 0;
 var inputArray = document.querySelectorAll("input[type=number]");
 var randCode = "";
 
-fetch("http://localhost:8000/random/")
+fetch("https://crack-the-code-backend.vercel.app/random/")
   .then((response) => response.json())
   .then((data) => {
     randCode = data.rand.toString();
