@@ -6,7 +6,6 @@ function enableAndFocusInput(id) {
 
 let guessCount = 0;
 
-// Limit input to a single digit
 var inputArray = document.querySelectorAll("input[type=number]");
 var randCode = "";
 
@@ -28,7 +27,6 @@ inputArray.forEach((input, index) => {
     }
   });
 
-  // Go one back on delete
   input.addEventListener("keyup", (event) => {
     if (event.key === "Backspace" && input.value === "" && index > 0) {
       inputArray[index - 1].focus();
@@ -41,9 +39,9 @@ inputArray.forEach((input, index) => {
         .map((input) => input.value)
         .join("");
       if (userCode.length === 4) {
-        guessCount++; // Increment the guess count here
+        guessCount++; 
         document.getElementById("guessCount").textContent =
-          "Guesses: " + guessCount; // Update the guess count display here
+          "Guesses: " + guessCount;
         var guessed = 0;
         for (var i = 0; i < 4; i++) {
           if (userCode[i] === randCode[i]) {
@@ -56,7 +54,7 @@ inputArray.forEach((input, index) => {
             : `You cracked the code ${randCode} in ${guessCount} guesses.`;
         var guessesDiv = document.getElementById("guesses");
         var guessDiv = document.createElement("div");
-        guessDiv.textContent = `Guess: ${userCode}, Correct digits: ${guessed}`; // Removed the guess count from here
+        guessDiv.textContent = `Guess: ${userCode}, Correct digits: ${guessed}`; 
         guessesDiv.prepend(guessDiv);
 
         if (guessed === 4) {
@@ -76,7 +74,6 @@ inputArray.forEach((input, index) => {
           guessDiv.style.opacity = "0.5";
         }
 
-        // Clear the input fields
         for (var i = 0; i < inputArray.length; i++) {
           if (guessed === 4) {
             inputArray[i].disabled = true;

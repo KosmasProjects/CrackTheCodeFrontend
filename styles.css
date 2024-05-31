@@ -1,11 +1,9 @@
-/* Hide the input arrows */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* Center the content */
 body {
   color: #d3d3d3;
   display: flex;
@@ -23,7 +21,6 @@ h1 {
   margin-bottom: 20px;
   font-size: 75px;
 }
-/* Set the width of the div to 50% of the full width */
 div {
   max-width: 40%;
   width: auto;
@@ -31,9 +28,7 @@ div {
   justify-content: center;
   text-align: center;
 }
-/* Add space between the items and give them a white background with a shadow */
 
-/* Increase the size of the input fields and the font size */
 input[type="number"] {
   background-color: #272727;
   color: #d3d3d3;
@@ -43,8 +38,8 @@ input[type="number"] {
   margin: 0 5px;
   text-align: center;
   border-radius: 20%;
-  border: none; /* Make the border invisible */
-  box-shadow: 2px 2px 4px #000000; /* Add a shadow under the numbers */
+  border: none;
+  box-shadow: 2px 2px 4px #000000;
   outline: none;
 }
 
@@ -91,7 +86,7 @@ input[type="number"] {
   width: 100%;
   padding: 10px;
   margin-top: 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   cursor: pointer;
@@ -102,18 +97,13 @@ input[type="number"] {
   width: 100%;
   padding: 10px;
   margin-top: 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   cursor: pointer;
   align-self: flex-end;
 }
 
-/* Existing CSS */
-
-/* ... */
-
-/* Responsive CSS for screens smaller than 600px (typical smartphone) */
 @media (max-width: 600px) {
   body {
     padding-top: 50px;
